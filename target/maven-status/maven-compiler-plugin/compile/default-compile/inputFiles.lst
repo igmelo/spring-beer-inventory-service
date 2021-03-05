@@ -1,0 +1,14 @@
+C:\mssc-beer-service\spring-beer-inventory-service\src\main\java\igor\sfg\common\events\NewInventoryEvent.java
+C:\mssc-beer-service\spring-beer-inventory-service\src\main\java\igor\sfg\beer\inventory\service\bootstrap\BeerInvntoryBootstrap.java
+C:\mssc-beer-service\spring-beer-inventory-service\src\main\java\igor\sfg\beer\inventory\service\services\NewInventoryListener.java
+C:\mssc-beer-service\spring-beer-inventory-service\src\main\java\igor\sfg\beer\inventory\service\BeerInventoryApplication.java
+C:\mssc-beer-service\spring-beer-inventory-service\src\main\java\igor\sfg\common\events\BeerDto.java
+C:\mssc-beer-service\spring-beer-inventory-service\src\main\java\igor\sfg\beer\inventory\service\config\JmsConfig.java
+C:\mssc-beer-service\spring-beer-inventory-service\src\main\java\igor\sfg\beer\inventory\service\web\model\BeerInventoryDto.java
+C:\mssc-beer-service\spring-beer-inventory-service\src\main\java\igor\sfg\beer\inventory\service\web\mappers\BeerInventoryMapper.java
+C:\mssc-beer-service\spring-beer-inventory-service\src\main\java\igor\sfg\beer\inventory\service\web\mappers\DateMapper.java
+C:\mssc-beer-service\spring-beer-inventory-service\src\main\java\igor\sfg\beer\inventory\service\domain\BaseEntity.java
+C:\mssc-beer-service\spring-beer-inventory-service\src\main\java\igor\sfg\beer\inventory\service\domain\BeerInventory.java
+C:\mssc-beer-service\spring-beer-inventory-service\src\main\java\igor\sfg\beer\inventory\service\web\controllers\BeerInventoryController.java
+C:\mssc-beer-service\spring-beer-inventory-service\src\main\java\igor\sfg\common\events\BeerEvent.java
+C:\mssc-beer-service\spring-beer-inventory-service\src\main\java\igor\sfg\beer\inventory\service\repositories\BeerInventoryRepository.java
