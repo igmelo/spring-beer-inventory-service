@@ -8,8 +8,8 @@ import org.springframework.jms.annotation.JmsListener;
 import org.springframework.stereotype.Component;
 
 @Slf4j
-@Component
 @RequiredArgsConstructor
+@Component
 public class DeallocationListener {
 
     private final AllocationService allocationService;

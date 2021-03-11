@@ -15,6 +15,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 @RequiredArgsConstructor
 @Service
 public class AllocationServiceImpl implements AllocationService {
+
     private final BeerInventoryRepository beerInventoryRepository;
 
     @Override
@@ -57,6 +58,9 @@ public class AllocationServiceImpl implements AllocationService {
                 beerOrderLine.setQuantityAllocated(allocatedQty + inventory);
                 beerInventory.setQuantityOnHand(0);
 
+            }
+
+            if (beerInventory.getQuantityOnHand() == 0) {
                 beerInventoryRepository.delete(beerInventory);
             }
         });
@@ -64,17 +68,17 @@ public class AllocationServiceImpl implements AllocationService {
     }
 
     @Override
-    public void deallocateOrder(BeerOrderDto beerOrderDto){
-        beerOrderDto.getBeerOrderLines().forEach(BeerOrderLineDto -> {
+    public void deallocateOrder(BeerOrderDto beerOrderDto) {
+        beerOrderDto.getBeerOrderLines().forEach(beerOrderLineDto -> {
             BeerInventory beerInventory = BeerInventory.builder()
-                    .beerId(BeerOrderLineDto.getBeerId())
-                    .upc(BeerOrderLineDto.getUpc())
-                    .quantityOnHand(BeerOrderLineDto.getQuantityAllocated())
+                    .beerId(beerOrderLineDto.getBeerId())
+                    .upc(beerOrderLineDto.getUpc())
+                    .quantityOnHand(beerOrderLineDto.getQuantityAllocated())
                     .build();
 
             BeerInventory savedInventory = beerInventoryRepository.save(beerInventory);
 
-            log.debug("Saved inventory for beer upc" + savedInventory.getUpc() + " inventory id: " + savedInventory.getId());
+            log.debug("Saved Inventory for beer upc: " + savedInventory.getUpc() + " inventory id: " + savedInventory.getId());
         });
     }
 }
